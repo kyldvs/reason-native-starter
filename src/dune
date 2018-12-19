@@ -1,0 +1,6 @@
+(library
+  (name FooBar)
+  (public_name foobar.lib)
+  (libraries)
+)
+(include_subdirs unqualified)
