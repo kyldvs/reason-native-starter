@@ -21,7 +21,8 @@
     "refmterr": "*",
     "ocaml": ">= 4.2.0  <= 4.7.0",
     "@opam/re": "*",
-    "@reason-native/rely": "*"
+    "@reason-native/rely": "*",
+    "rhythm": "^2.0.0"
   },
   "devDependencies": {
     "@opam/merlin": "*",

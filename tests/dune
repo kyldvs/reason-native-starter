@@ -5,6 +5,7 @@
   (libraries
     rely.lib
     foobar.lib
+    rhythm.lib
   )
 )
 (include_subdirs unqualified)

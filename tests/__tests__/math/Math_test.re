@@ -1,7 +1,14 @@
 open TestFramework;
 open FooBar;
+open Rhythm;
 
 describe("Math", ({test}) => {
+  test("rhythm", ({expect}) => {
+    let x = Deque.make() |> Deque.addLast(1) |> Deque.addLast(2);
+    expect.int(Deque.getFirstExn(x)).toBe(1);
+    expect.int(Deque.getLastExn(x)).toBe(2);
+  });
+
   test("log2 good", ({expect}) => {
     /* Tests values 2^k and (2^k)-1 for k in [1, 32] */
     expect.int(Math.log2(1)).toBe(0);
@@ -70,8 +77,6 @@ describe("Math", ({test}) => {
     expect.int(Math.log2(4_294_967_296)).toBe(32);
   });
 
-  test("log2 exceptions", ({expect}) => {
-    expect.fn(() => Math.log2(-1)).toThrowException(Math.Imaginary);
-    expect.fn(() => Math.log2(0)).toThrowException(Math.Undefined);
-  });
+
+
 });
